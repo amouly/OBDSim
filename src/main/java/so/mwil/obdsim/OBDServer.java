@@ -11,7 +11,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 /**
- * Created by matthew on 30/10/14.
+ *  Created by matthew on 30/10/14.
  */
 public class OBDServer {
 
@@ -20,7 +20,7 @@ public class OBDServer {
             ServerSocket serverSocket = new ServerSocket(portNumber);
 
             InetAddress IP = InetAddress.getLocalHost();
-            System.out.println("Simulator is running on : " + IP.getHostAddress() + " port number : " + portNumber);
+            System.out.println("Simulator is running on: " + IP.getHostAddress() + " port number : " + portNumber);
 
             Socket clientSocket = serverSocket.accept();
             PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
@@ -33,7 +33,7 @@ public class OBDServer {
             System.out.println("Connected to client");
 
             while ((inputLine = in.readLine()) != null) {
-
+                // Process response for command
                 outputLine = obdp.processInput(inputLine);
 
                 if(outputLine != null) {
