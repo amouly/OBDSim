@@ -10,7 +10,7 @@ This app will simulate a WiFi OBD dongle, allowing development of companion mobi
 
 * You need to install java 7 jdk
 * Maven is used to download dependencies and build
-* Developed in IntelliJ Comminity Edition
+* Developed in IntelliJ Community Edition
 
 ## How to test it? ##
 
@@ -25,5 +25,10 @@ nc -vt 'your ip' 35000
 Currently the simulator supports these OBD PIDS:
 
 * 0B - Intake Manifold Absolute Pressure
+* 0C - Engine RPM
 
-full list of pids can be viewed on wikipedia - http://en.wikipedia.org/wiki/OBD-II_PIDs#Mode_01
+Full list of PIDs can be viewed on Wikipedia:
+
+```
+http://en.wikipedia.org/wiki/OBD-II_PIDs#Mode_01
+```
